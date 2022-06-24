@@ -1,0 +1,3520 @@
+---
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: revtek api documentation
+  contact:
+    url: https://access.theiot.company
+    email: support@theiot.company
+host: access.theiot.company
+basePath: /version-test/api/1.1
+tags:
+- name: Workflow
+  description: Use this to trigger a workflow
+- name: Data
+  description: Use this to fetch, modify and delete data
+schemes:
+- https
+consumes:
+- application/json
+security:
+- api_token: []
+paths:
+  /wf/nedapinout:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow nedapinout
+      parameters:
+      - in: body
+        name: nedapinout request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/nedapinoutBody'
+      security: []
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /wf/PurgeLogs:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow PurgeLogs
+      parameters: []
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /wf/SCHEDULEDVISITORdeletion:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow SCHEDULEDVISITORdeletion
+      parameters:
+      - in: body
+        name: SCHEDULEDVISITORdeletion request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/SCHEDULEDVISITORdeletionBody'
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /wf/LinkTokensToDevices:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow LinkTokensToDevices
+      parameters:
+      - in: body
+        name: LinkTokensToDevices request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/LinkTokensToDevicesBody'
+      security: []
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /wf/test:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow test
+      parameters:
+      - in: body
+        name: test request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/testBody'
+      security: []
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /wf/tokenaccesslog:
+    post:
+      tags:
+      - Workflow
+      description: Triggers the workflow tokenaccesslog
+      parameters:
+      - in: body
+        name: tokenaccesslog request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/tokenaccesslogBody'
+      security: []
+      responses:
+        "200":
+          description: Workflow response
+          schema:
+            $ref: '#/definitions/inline_response_200'
+        "400":
+          description: Workflow failure
+          schema:
+            $ref: '#/definitions/inline_response_400'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/devicegroup/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type devicegroup by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devicegroup to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved devicegroup
+          schema:
+            $ref: '#/definitions/inline_response_200_1'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type devicegroup by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devicegroup to replace
+        required: true
+        type: string
+      - in: body
+        name: devicegroup request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/devicegroupBody'
+      responses:
+        "204":
+          description: Replaced devicegroup
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type devicegroup by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devicegroup to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced devicegroup
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type devicegroup by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devicegroup to modify
+        required: true
+        type: string
+      - in: body
+        name: devicegroup request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/devicegroupBody'
+      responses:
+        "204":
+          description: Modified devicegroup
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/devicegroup:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type devicegroup with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of devicegroups
+          schema:
+            $ref: '#/definitions/inline_response_200_2'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type devicegroup
+      parameters:
+      - in: body
+        name: devicegroup request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/devicegroupBody'
+      responses:
+        "201":
+          description: Created one thing of type devicegroup
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/devices/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type devices by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devices to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved devices
+          schema:
+            $ref: '#/definitions/inline_response_200_3'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type devices by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devices to replace
+        required: true
+        type: string
+      - in: body
+        name: devices request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/devicesBody'
+      responses:
+        "204":
+          description: Replaced devices
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type devices by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devices to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced devices
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type devices by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the devices to modify
+        required: true
+        type: string
+      - in: body
+        name: devices request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/devicesBody'
+      responses:
+        "204":
+          description: Modified devices
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/devices:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type devices with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of devicess
+          schema:
+            $ref: '#/definitions/inline_response_200_4'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type devices
+      parameters:
+      - in: body
+        name: devices request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/devicesBody'
+      responses:
+        "201":
+          description: Created one thing of type devices
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/logs/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type logs by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the logs to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved logs
+          schema:
+            $ref: '#/definitions/inline_response_200_5'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type logs by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the logs to replace
+        required: true
+        type: string
+      - in: body
+        name: logs request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/logsBody'
+      responses:
+        "204":
+          description: Replaced logs
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type logs by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the logs to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced logs
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type logs by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the logs to modify
+        required: true
+        type: string
+      - in: body
+        name: logs request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/logsBody'
+      responses:
+        "204":
+          description: Modified logs
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/logs:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type logs with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of logss
+          schema:
+            $ref: '#/definitions/inline_response_200_6'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type logs
+      parameters:
+      - in: body
+        name: logs request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/logsBody'
+      responses:
+        "201":
+          description: Created one thing of type logs
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/permissions/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type permissions by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the permissions to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved permissions
+          schema:
+            $ref: '#/definitions/inline_response_200_7'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type permissions by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the permissions to replace
+        required: true
+        type: string
+      - in: body
+        name: permissions request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/permissionsBody'
+      responses:
+        "204":
+          description: Replaced permissions
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type permissions by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the permissions to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced permissions
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type permissions by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the permissions to modify
+        required: true
+        type: string
+      - in: body
+        name: permissions request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/permissionsBody'
+      responses:
+        "204":
+          description: Modified permissions
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/permissions:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type permissions with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of permissionss
+          schema:
+            $ref: '#/definitions/inline_response_200_8'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type permissions
+      parameters:
+      - in: body
+        name: permissions request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/permissionsBody'
+      responses:
+        "201":
+          description: Created one thing of type permissions
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/registrations/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type registrations by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the registrations to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved registrations
+          schema:
+            $ref: '#/definitions/inline_response_200_9'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type registrations by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the registrations to replace
+        required: true
+        type: string
+      - in: body
+        name: registrations request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/registrationsBody'
+      responses:
+        "204":
+          description: Replaced registrations
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type registrations by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the registrations to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced registrations
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type registrations by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the registrations to modify
+        required: true
+        type: string
+      - in: body
+        name: registrations request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/registrationsBody'
+      responses:
+        "204":
+          description: Modified registrations
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/registrations:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type registrations with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of registrationss
+          schema:
+            $ref: '#/definitions/inline_response_200_10'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type registrations
+      parameters:
+      - in: body
+        name: registrations request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/registrationsBody'
+      responses:
+        "201":
+          description: Created one thing of type registrations
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/token/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type token by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the token to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved token
+          schema:
+            $ref: '#/definitions/inline_response_200_11'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type token by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the token to replace
+        required: true
+        type: string
+      - in: body
+        name: token request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/tokenBody'
+      responses:
+        "204":
+          description: Replaced token
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type token by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the token to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced token
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type token by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the token to modify
+        required: true
+        type: string
+      - in: body
+        name: token request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/tokenBody'
+      responses:
+        "204":
+          description: Modified token
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/token:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type token with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of tokens
+          schema:
+            $ref: '#/definitions/inline_response_200_12'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type token
+      parameters:
+      - in: body
+        name: token request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/tokenBody'
+      responses:
+        "201":
+          description: Created one thing of type token
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/user/{UniqueID}:
+    get:
+      tags:
+      - Data
+      description: Retrieve a thing of type user by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the user to retrieve
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Retrieved user
+          schema:
+            $ref: '#/definitions/inline_response_200_13'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    put:
+      tags:
+      - Data
+      description: Replaces a thing of type user by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the user to replace
+        required: true
+        type: string
+      - in: body
+        name: user request body
+        description: Body of the PUT request
+        required: false
+        schema:
+          $ref: '#/definitions/userBody'
+      responses:
+        "204":
+          description: Replaced user
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    delete:
+      tags:
+      - Data
+      description: Deletes a thing of type user by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the user to delete
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Replaced user
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    patch:
+      tags:
+      - Data
+      description: Modifies a thing of type user by unique ID
+      parameters:
+      - name: UniqueID
+        in: path
+        description: Unique ID of the user to modify
+        required: true
+        type: string
+      - in: body
+        name: user request body
+        description: Body of the PATCH request
+        required: false
+        schema:
+          $ref: '#/definitions/userBody'
+      responses:
+        "204":
+          description: Modified user
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+  /obj/user:
+    get:
+      tags:
+      - Data
+      description: Retrieve a list of things of type user with some optional search constraints. Retreives 100 items at most at once.
+      parameters:
+      - name: limit
+        in: query
+        description: Number of items to fetch (maximum is 100)
+        required: false
+        type: integer
+        default: 50
+        format: int32
+      - name: cursor
+        in: query
+        description: Position to start from in the list
+        required: false
+        type: integer
+        default: 0
+        format: int32
+      - name: sort_field
+        in: query
+        description: Field to sort the list on
+        required: false
+        type: string
+      - name: descending
+        in: query
+        description: 'Sorting type: descending or ascending'
+        required: false
+        type: boolean
+      - name: constraints
+        in: query
+        description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+        required: false
+        type: string
+      responses:
+        "200":
+          description: Retrieved list of users
+          schema:
+            $ref: '#/definitions/inline_response_200_14'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+    post:
+      tags:
+      - Data
+      description: Create a new thing of type user
+      parameters:
+      - in: body
+        name: user request body
+        description: Body of the POST request
+        required: false
+        schema:
+          $ref: '#/definitions/userBody'
+      responses:
+        "201":
+          description: Created one thing of type user
+          schema:
+            $ref: '#/definitions/inline_response_201'
+        "400":
+          description: Database retrieval failure
+          schema:
+            $ref: '#/definitions/inline_response_400_1'
+        "401":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "404":
+          description: Not found
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "405":
+          description: Wrong method
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/inline_response_401'
+        "500":
+          description: Internal bug. Please file a bug report at bubble.io/bug_report with the request that triggers this bug
+          schema:
+            $ref: '#/definitions/inline_response_500'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/inline_response_401'
+securityDefinitions:
+  api_token:
+    type: apiKey
+    name: api_token
+    in: query
+definitions:
+  devicegroup:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current DeviceGroup (''accounts'' represented by a unique ID)'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current DeviceGroup'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      GroupName:
+        type: string
+        description: '''GroupName'' field of the current DeviceGroup'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current DeviceGroup'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current DeviceGroup'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current DeviceGroup (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current DeviceGroup'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current DeviceGroup'
+  devices:
+    type: object
+    properties:
+      Accounts:
+        type: array
+        description: '''Accounts'' field of the current Devices'
+        items:
+          type: string
+          description: accounts ('accounts' represented by a unique ID)
+      Details:
+        type: string
+        description: '''Details'' field of the current Devices'
+      Device Group:
+        type: string
+        description: '''Device Group'' field of the current Devices (''devicegroup'' represented by a unique ID)'
+      DevicePassword:
+        type: string
+        description: '''DevicePassword'' field of the current Devices'
+      DeviceUrl:
+        type: string
+        description: '''DeviceUrl'' field of the current Devices'
+      DeviceUserName:
+        type: string
+        description: '''DeviceUserName'' field of the current Devices'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Devices'
+      Location:
+        type: string
+        description: '''Location'' field of the current Devices (''locations'' represented by a unique ID)'
+      Name:
+        type: string
+        description: '''Name'' field of the current Devices'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current Devices'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current Devices'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current Devices (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current Devices'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current Devices'
+  logs:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Logs (''accounts'' represented by a unique ID)'
+      Asset:
+        type: string
+        description: '''Asset'' field of the current Logs'
+      Description:
+        type: string
+        description: '''Description'' field of the current Logs'
+      EventCode:
+        type: string
+        description: '''EventCode'' field of the current Logs'
+      EventType:
+        type: string
+        description: '''EventType'' field of the current Logs'
+      key:
+        type: string
+        description: '''key'' field of the current Logs'
+      Token:
+        type: string
+        description: '''Token'' field of the current Logs'
+      TokenLookup:
+        type: string
+        description: '''TokenLookup'' field of the current Logs (''token'' represented by a unique ID)'
+      UniqueExternalId:
+        type: string
+        description: '''UniqueExternalId'' field of the current Logs'
+      Value:
+        type: string
+        description: '''Value'' field of the current Logs'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current Logs'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current Logs'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current Logs (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current Logs'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current Logs'
+  permissions:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Permissions (''accounts'' represented by a unique ID)'
+      CanViewDevices:
+        type: boolean
+        description: '''CanViewDevices'' field of the current Permissions'
+      CanViewReports:
+        type: boolean
+        description: '''CanViewReports'' field of the current Permissions'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current Permissions'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      FridayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      JsonValue:
+        type: string
+        description: '''JsonValue'' field of the current Permissions'
+      MondayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      Name:
+        type: string
+        description: '''Name'' field of the current Permissions'
+      SaturdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      SundayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      ThursdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      TuesdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      Type:
+        type: string
+        description: '''Type'' field of the current Permissions'
+      WednesdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current Permissions'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current Permissions'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current Permissions (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current Permissions'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current Permissions'
+  registrations:
+    type: object
+    properties:
+      AccessLevel_Id:
+        type: string
+        description: '''AccessLevel_Id'' field of the current Registrations'
+      Account:
+        type: string
+        description: '''Account'' field of the current Registrations (''accounts'' represented by a unique ID)'
+      Avatar:
+        type: string
+        description: '''Avatar'' field of the current Registrations'
+      Email:
+        type: string
+        description: '''Email'' field of the current Registrations'
+      EndDate:
+        type: string
+        format: date-time
+        description: '''EndDate'' field of the current Registrations'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Registrations'
+      IdentificationNumber:
+        type: string
+        description: '''IdentificationNumber'' field of the current Registrations'
+      IdentificationType:
+        type: string
+        description: '''IdentificationType'' field of the current Registrations'
+      Last Entry Date:
+        type: string
+        format: date-time
+        description: '''Last Entry Date'' field of the current Registrations'
+      Last Exit Date:
+        type: string
+        format: date-time
+        description: '''Last Exit Date'' field of the current Registrations'
+      Licence Plate:
+        type: string
+        description: '''Licence Plate'' field of the current Registrations'
+      Location:
+        type: string
+        description: '''Location'' field of the current Registrations (''locations'' represented by a unique ID)'
+      Name:
+        type: string
+        description: '''Name'' field of the current Registrations'
+      NotificationSent:
+        type: boolean
+        description: '''NotificationSent'' field of the current Registrations'
+      NotificationUser:
+        type: string
+        description: '''NotificationUser'' field of the current Registrations (''user'' represented by a unique ID)'
+      Phone:
+        type: string
+        description: '''Phone'' field of the current Registrations'
+      StartDate:
+        type: string
+        format: date-time
+        description: '''StartDate'' field of the current Registrations'
+      Status:
+        type: string
+        description: '''Status'' field of the current Registrations'
+      TokenId:
+        type: string
+        description: '''TokenId'' field of the current Registrations'
+      UniqueId:
+        type: string
+        description: '''UniqueId'' field of the current Registrations'
+      Visitor:
+        type: boolean
+        description: '''Visitor'' field of the current Registrations'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current Registrations'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current Registrations'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current Registrations (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current Registrations'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current Registrations'
+  token:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Token (''accounts'' represented by a unique ID)'
+      StartDate:
+        type: string
+        format: date-time
+        description: '''StartDate'' field of the current Token'
+      Always:
+        type: boolean
+        description: '''Always'' field of the current Token'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current Token'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      Email:
+        type: string
+        description: '''Email'' field of the current Token'
+      EndDate:
+        type: string
+        format: date-time
+        description: '''EndDate'' field of the current Token'
+      ExistingUser:
+        type: boolean
+        description: '''ExistingUser'' field of the current Token'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Token'
+      AutoId:
+        type: string
+        description: '''AutoId'' field of the current Token'
+      ExternalLicensePlate:
+        type: string
+        description: '''ExternalLicensePlate'' field of the current Token'
+      FirstName:
+        type: string
+        description: '''FirstName'' field of the current Token'
+      FromImport:
+        type: boolean
+        description: '''FromImport'' field of the current Token'
+      Hash:
+        type: string
+        description: '''Hash'' field of the current Token'
+      LastEntryDate:
+        type: string
+        format: date-time
+        description: '''LastEntryDate'' field of the current Token'
+      LastExitDate:
+        type: string
+        format: date-time
+        description: '''LastExitDate'' field of the current Token'
+      LastName:
+        type: string
+        description: '''LastName'' field of the current Token'
+      ManualReSync:
+        type: boolean
+        description: '''ManualReSync'' field of the current Token'
+      MiddleName:
+        type: string
+        description: '''MiddleName'' field of the current Token'
+      Name:
+        type: string
+        description: '''Name'' field of the current Token'
+      Permissions:
+        type: array
+        description: '''Permissions'' field of the current Token'
+        items:
+          type: string
+          description: permissions ('permissions' represented by a unique ID)
+      Pincode:
+        type: number
+        format: float
+        description: '''Pincode'' field of the current Token'
+      QRCode:
+        type: string
+        description: '''QRCode'' field of the current Token'
+      Registration:
+        type: string
+        description: '''Registration'' field of the current Token (''registrations'' represented by a unique ID)'
+      Status:
+        type: string
+        description: '''Status'' field of the current Token'
+      TokenId:
+        type: string
+        description: '''TokenId'' field of the current Token'
+      TokenValue:
+        type: string
+        description: '''TokenValue'' field of the current Token'
+      UserId:
+        type: string
+        description: '''UserId'' field of the current Token'
+      UserName:
+        type: string
+        description: '''UserName'' field of the current Token'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current Token'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current Token'
+      Created By:
+        type: string
+        description: '''Created By'' field of the current Token (''user'' represented by a unique ID)'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current Token'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current Token'
+  user:
+    type: object
+    properties:
+      Accessmngr:
+        type: boolean
+        description: '''Accessmngr'' field of the current User'
+      Account Admin:
+        type: boolean
+        description: '''Account Admin'' field of the current User'
+      Account:
+        type: string
+        description: '''Account'' field of the current User (''accounts'' represented by a unique ID)'
+      Beta User:
+        type: boolean
+        description: '''Beta User'' field of the current User'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current User'
+      Hash:
+        type: string
+        description: '''Hash'' field of the current User'
+      EncryptedValue:
+        type: string
+        description: '''EncryptedValue'' field of the current User'
+      Installer:
+        type: boolean
+        description: '''Installer'' field of the current User'
+      Key:
+        type: string
+        description: '''Key'' field of the current User'
+      Last Login:
+        type: string
+        format: date-time
+        description: '''Last Login'' field of the current User'
+      Locations:
+        type: array
+        description: '''Locations'' field of the current User'
+        items:
+          type: string
+          description: locations ('locations' represented by a unique ID)
+      Nickname:
+        type: string
+        description: '''Nickname'' field of the current User'
+      PinResetRequested:
+        type: boolean
+        description: '''PinResetRequested'' field of the current User'
+      TemporaryPassword:
+        type: string
+        description: '''TemporaryPassword'' field of the current User'
+      Tenant Admin:
+        type: boolean
+        description: '''Tenant Admin'' field of the current User'
+      UpdateAcknowledge:
+        type: boolean
+        description: '''UpdateAcknowledge'' field of the current User'
+      Created Date:
+        type: string
+        format: date-time
+        description: '''Created Date'' field of the current User'
+      Modified Date:
+        type: string
+        format: date-time
+        description: '''Modified Date'' field of the current User'
+      _id:
+        type: string
+        description: '''unique ID'' field of the current User'
+      Slug:
+        type: string
+        description: '''Slug'' field of the current User'
+      authentication:
+        $ref: '#/definitions/user_authentication'
+  nedapinoutBody:
+    type: object
+    required:
+    - Asset
+    - Description
+    - Value
+    properties:
+      Value:
+        type: string
+      Description:
+        type: string
+      Asset:
+        type: string
+  SCHEDULEDVISITORdeletionBody:
+    type: object
+    required:
+    - Scheduled
+    properties:
+      Scheduled:
+        type: string
+        description: scheduledactions ('scheduledactions' represented by a unique ID)
+  LinkTokensToDevicesBody:
+    type: object
+    required:
+    - Permissions
+    - Token
+    properties:
+      Token:
+        type: string
+        description: token ('token' represented by a unique ID)
+      Permissions:
+        type: array
+        items:
+          type: string
+          description: permissions ('permissions' represented by a unique ID)
+  testBody:
+    type: object
+    required:
+    - Value
+    properties:
+      Value:
+        type: string
+  tokenaccesslogBody:
+    type: object
+    required:
+    - device
+    - status
+    - token
+    properties:
+      token:
+        type: string
+      status:
+        type: string
+      device:
+        type: string
+  devicegroupBody:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current DeviceGroup (''accounts'' represented by a unique ID)'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current DeviceGroup'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      GroupName:
+        type: string
+        description: '''GroupName'' field of the current DeviceGroup'
+  devicesBody:
+    type: object
+    properties:
+      Accounts:
+        type: array
+        description: '''Accounts'' field of the current Devices'
+        items:
+          type: string
+          description: accounts ('accounts' represented by a unique ID)
+      Details:
+        type: string
+        description: '''Details'' field of the current Devices'
+      Device Group:
+        type: string
+        description: '''Device Group'' field of the current Devices (''devicegroup'' represented by a unique ID)'
+      DevicePassword:
+        type: string
+        description: '''DevicePassword'' field of the current Devices'
+      DeviceUrl:
+        type: string
+        description: '''DeviceUrl'' field of the current Devices'
+      DeviceUserName:
+        type: string
+        description: '''DeviceUserName'' field of the current Devices'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Devices'
+      Location:
+        type: string
+        description: '''Location'' field of the current Devices (''locations'' represented by a unique ID)'
+      Name:
+        type: string
+        description: '''Name'' field of the current Devices'
+  logsBody:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Logs (''accounts'' represented by a unique ID)'
+      Asset:
+        type: string
+        description: '''Asset'' field of the current Logs'
+      Description:
+        type: string
+        description: '''Description'' field of the current Logs'
+      EventCode:
+        type: string
+        description: '''EventCode'' field of the current Logs'
+      EventType:
+        type: string
+        description: '''EventType'' field of the current Logs'
+      key:
+        type: string
+        description: '''key'' field of the current Logs'
+      Token:
+        type: string
+        description: '''Token'' field of the current Logs'
+      TokenLookup:
+        type: string
+        description: '''TokenLookup'' field of the current Logs (''token'' represented by a unique ID)'
+      UniqueExternalId:
+        type: string
+        description: '''UniqueExternalId'' field of the current Logs'
+      Value:
+        type: string
+        description: '''Value'' field of the current Logs'
+  permissionsBody:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Permissions (''accounts'' represented by a unique ID)'
+      CanViewDevices:
+        type: boolean
+        description: '''CanViewDevices'' field of the current Permissions'
+      CanViewReports:
+        type: boolean
+        description: '''CanViewReports'' field of the current Permissions'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current Permissions'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      FridayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      JsonValue:
+        type: string
+        description: '''JsonValue'' field of the current Permissions'
+      MondayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      Name:
+        type: string
+        description: '''Name'' field of the current Permissions'
+      SaturdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      SundayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      ThursdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      TuesdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+      Type:
+        type: string
+        description: '''Type'' field of the current Permissions'
+      WednesdayTimeRange:
+        type: array
+        items:
+          type: number
+          format: float
+          description: Bounds of the number range
+  registrationsBody:
+    type: object
+    properties:
+      AccessLevel_Id:
+        type: string
+        description: '''AccessLevel_Id'' field of the current Registrations'
+      Account:
+        type: string
+        description: '''Account'' field of the current Registrations (''accounts'' represented by a unique ID)'
+      Avatar:
+        type: string
+        description: '''Avatar'' field of the current Registrations'
+      Email:
+        type: string
+        description: '''Email'' field of the current Registrations'
+      EndDate:
+        type: string
+        format: date-time
+        description: '''EndDate'' field of the current Registrations'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Registrations'
+      IdentificationNumber:
+        type: string
+        description: '''IdentificationNumber'' field of the current Registrations'
+      IdentificationType:
+        type: string
+        description: '''IdentificationType'' field of the current Registrations'
+      Last Entry Date:
+        type: string
+        format: date-time
+        description: '''Last Entry Date'' field of the current Registrations'
+      Last Exit Date:
+        type: string
+        format: date-time
+        description: '''Last Exit Date'' field of the current Registrations'
+      Licence Plate:
+        type: string
+        description: '''Licence Plate'' field of the current Registrations'
+      Location:
+        type: string
+        description: '''Location'' field of the current Registrations (''locations'' represented by a unique ID)'
+      Name:
+        type: string
+        description: '''Name'' field of the current Registrations'
+      NotificationSent:
+        type: boolean
+        description: '''NotificationSent'' field of the current Registrations'
+      NotificationUser:
+        type: string
+        description: '''NotificationUser'' field of the current Registrations (''user'' represented by a unique ID)'
+      Phone:
+        type: string
+        description: '''Phone'' field of the current Registrations'
+      StartDate:
+        type: string
+        format: date-time
+        description: '''StartDate'' field of the current Registrations'
+      Status:
+        type: string
+        description: '''Status'' field of the current Registrations'
+      TokenId:
+        type: string
+        description: '''TokenId'' field of the current Registrations'
+      UniqueId:
+        type: string
+        description: '''UniqueId'' field of the current Registrations'
+      Visitor:
+        type: boolean
+        description: '''Visitor'' field of the current Registrations'
+  tokenBody:
+    type: object
+    properties:
+      Account:
+        type: string
+        description: '''Account'' field of the current Token (''accounts'' represented by a unique ID)'
+      StartDate:
+        type: string
+        format: date-time
+        description: '''StartDate'' field of the current Token'
+      Always:
+        type: boolean
+        description: '''Always'' field of the current Token'
+      Devices:
+        type: array
+        description: '''Devices'' field of the current Token'
+        items:
+          type: string
+          description: devices ('devices' represented by a unique ID)
+      Email:
+        type: string
+        description: '''Email'' field of the current Token'
+      EndDate:
+        type: string
+        format: date-time
+        description: '''EndDate'' field of the current Token'
+      ExistingUser:
+        type: boolean
+        description: '''ExistingUser'' field of the current Token'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current Token'
+      AutoId:
+        type: string
+        description: '''AutoId'' field of the current Token'
+      ExternalLicensePlate:
+        type: string
+        description: '''ExternalLicensePlate'' field of the current Token'
+      FirstName:
+        type: string
+        description: '''FirstName'' field of the current Token'
+      FromImport:
+        type: boolean
+        description: '''FromImport'' field of the current Token'
+      Hash:
+        type: string
+        description: '''Hash'' field of the current Token'
+      LastEntryDate:
+        type: string
+        format: date-time
+        description: '''LastEntryDate'' field of the current Token'
+      LastExitDate:
+        type: string
+        format: date-time
+        description: '''LastExitDate'' field of the current Token'
+      LastName:
+        type: string
+        description: '''LastName'' field of the current Token'
+      ManualReSync:
+        type: boolean
+        description: '''ManualReSync'' field of the current Token'
+      MiddleName:
+        type: string
+        description: '''MiddleName'' field of the current Token'
+      Name:
+        type: string
+        description: '''Name'' field of the current Token'
+      Permissions:
+        type: array
+        description: '''Permissions'' field of the current Token'
+        items:
+          type: string
+          description: permissions ('permissions' represented by a unique ID)
+      Pincode:
+        type: number
+        format: float
+        description: '''Pincode'' field of the current Token'
+      QRCode:
+        type: string
+        description: '''QRCode'' field of the current Token'
+      Registration:
+        type: string
+        description: '''Registration'' field of the current Token (''registrations'' represented by a unique ID)'
+      Status:
+        type: string
+        description: '''Status'' field of the current Token'
+      TokenId:
+        type: string
+        description: '''TokenId'' field of the current Token'
+      TokenValue:
+        type: string
+        description: '''TokenValue'' field of the current Token'
+      UserId:
+        type: string
+        description: '''UserId'' field of the current Token'
+      UserName:
+        type: string
+        description: '''UserName'' field of the current Token'
+  userBody:
+    type: object
+    properties:
+      Accessmngr:
+        type: boolean
+        description: '''Accessmngr'' field of the current User'
+      Account Admin:
+        type: boolean
+        description: '''Account Admin'' field of the current User'
+      Account:
+        type: string
+        description: '''Account'' field of the current User (''accounts'' represented by a unique ID)'
+      Beta User:
+        type: boolean
+        description: '''Beta User'' field of the current User'
+      ExternalId:
+        type: string
+        description: '''ExternalId'' field of the current User'
+      Hash:
+        type: string
+        description: '''Hash'' field of the current User'
+      EncryptedValue:
+        type: string
+        description: '''EncryptedValue'' field of the current User'
+      Installer:
+        type: boolean
+        description: '''Installer'' field of the current User'
+      Key:
+        type: string
+        description: '''Key'' field of the current User'
+      Last Login:
+        type: string
+        format: date-time
+        description: '''Last Login'' field of the current User'
+      Locations:
+        type: array
+        description: '''Locations'' field of the current User'
+        items:
+          type: string
+          description: locations ('locations' represented by a unique ID)
+      Nickname:
+        type: string
+        description: '''Nickname'' field of the current User'
+      PinResetRequested:
+        type: boolean
+        description: '''PinResetRequested'' field of the current User'
+      TemporaryPassword:
+        type: string
+        description: '''TemporaryPassword'' field of the current User'
+      Tenant Admin:
+        type: boolean
+        description: '''Tenant Admin'' field of the current User'
+      UpdateAcknowledge:
+        type: boolean
+        description: '''UpdateAcknowledge'' field of the current User'
+  inline_response_200:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Outcome of the workflow
+      response:
+        type: object
+        properties: {}
+  inline_response_400:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Outcome of the workflow
+      message:
+        type: string
+        description: Error message for the workflow
+  inline_response_401:
+    type: object
+    properties:
+      message:
+        type: string
+        description: Error message for the operation
+  inline_response_500:
+    type: object
+    properties:
+      code:
+        type: string
+        description: Error code
+      message:
+        type: string
+        description: Error message for the operation
+  inline_response_200_1:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/devicegroup'
+  inline_response_400_1:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Error code
+      message:
+        type: string
+        description: Error message for the operation
+  inline_response_200_2_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/devicegroup'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_2:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_2_response'
+  inline_response_201:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Success status of the operation
+      id:
+        type: string
+        description: Unique id of the newly created object
+  inline_response_200_3:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/devices'
+  inline_response_200_4_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/devices'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_4:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_4_response'
+  inline_response_200_5:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/logs'
+  inline_response_200_6_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/logs'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_6:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_6_response'
+  inline_response_200_7:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/permissions'
+  inline_response_200_8_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/permissions'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_8:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_8_response'
+  inline_response_200_9:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/registrations'
+  inline_response_200_10_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/registrations'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_10:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_10_response'
+  inline_response_200_11:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/token'
+  inline_response_200_12_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/token'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_12:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_12_response'
+  inline_response_200_13:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/user'
+  inline_response_200_14_response:
+    type: object
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/user'
+      cursor:
+        type: number
+        format: float
+        description: Rank of the first item in the list
+      count:
+        type: number
+        format: float
+        description: Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit).
+      remaining:
+        type: number
+        format: float
+        description: Number of remaining items after the current response. Useful to fetch more items.
+  inline_response_200_14:
+    type: object
+    properties:
+      response:
+        $ref: '#/definitions/inline_response_200_14_response'
+  user_authentication_email:
+    type: object
+    properties:
+      email:
+        type: string
+        description: Email
+      email_confirmed:
+        type: boolean
+        description: Email confirmed
+  user_authentication:
+    type: object
+    properties:
+      email:
+        $ref: '#/definitions/user_authentication_email'
