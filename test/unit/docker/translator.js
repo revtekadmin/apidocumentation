@@ -123,12 +123,12 @@ describe("docker: env translator", function() {
 
     it("should generate a string config", function () {
       const input = {
-        URL: "http://petstore.swagger.io/v2/swagger.json",
+        URL: https://access.theiot.company/version-test/api/1.1/swagger.json",
         FILTER: ""
       }
 
       expect(translator(input)).toEqual(dedent(`
-      url: "http://petstore.swagger.io/v2/swagger.json",
+      url: https://access.theiot.company/version-test/api/1.1/swagger.json",
       filter: "",`
       ).trim())
     })

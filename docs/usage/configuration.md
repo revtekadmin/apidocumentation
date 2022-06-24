@@ -369,7 +369,7 @@ Example:
 
 ```sh
 SUPPORTED_SUBMIT_METHODS="[\"get\", \"post\"]"
-URLS="[ { url: \"http://petstore.swagger.io/v2/swagger.json\", name: \"Petstore\" } ]"
+URLS="[ { url: \https://access.theiot.company/version-test/api/1.1/swagger.json\", name: \"Petstore\" } ]"
 ```
 
 ##### Object variables
