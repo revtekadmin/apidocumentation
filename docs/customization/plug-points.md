@@ -229,7 +229,7 @@ const ui = SwaggerUIBundle({
   ],
   layout: "StandaloneLayout",
   validatorUrl: "https://validator.swagger.io/validator",
-  url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+  url: "./swagger.json",
   ...snippetConfig,
 })
 ```
@@ -288,7 +288,7 @@ plugins with additional custom components.
 
 ```js
 const swaggerUI = SwaggerUI({
-  url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+  url: "./swagger.json",
   dom_id: '#swagger-ui',
   plugins: [
     () => ({
@@ -376,7 +376,7 @@ const CustomFallbackPlugin = () => ({
 });
 
 const swaggerUI = SwaggerUI({
-  url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+  url: "./swagger.json",
   dom_id: '#swagger-ui',
   plugins: [
     CustomFallbackPlugin,

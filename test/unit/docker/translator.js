@@ -98,7 +98,7 @@ describe("docker: env translator", function() {
       expect(translator(input, {
         injectBaseConfig: true
       })).toEqual(dedent(`
-    url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+    url: "./swagger.json",
     "dom_id": "#swagger-ui",
     deepLinking: true,
     presets: [
@@ -123,12 +123,12 @@ describe("docker: env translator", function() {
 
     it("should generate a string config", function () {
       const input = {
-        URL: https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+        URL: ./swagger.json",
         FILTER: ""
       }
 
       expect(translator(input)).toEqual(dedent(`
-      url: https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
+      url: ./swagger.json",
       filter: "",`
       ).trim())
     })
