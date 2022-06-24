@@ -21,7 +21,7 @@ You can verify CORS support with one of three techniques:
 - Curl your API and inspect the headers.  For instance:
 
 ```bash
-$ curl -I "https://access.theiot.company/version-test/api/1.1/swagger.json"
+$ curl -I "https://access.theiot.company/version-test/api/1.1/meta/swagger.json"
 HTTP/1.1 200 OK
 Date: Sat, 31 Jan 2015 23:05:44 GMT
 Access-Control-Allow-Origin: *

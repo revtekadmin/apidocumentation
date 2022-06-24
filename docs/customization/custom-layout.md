@@ -40,7 +40,7 @@ const OperationsLayoutPlugin = () => {
 // Provide the plugin to Swagger-UI, and select OperationsLayout
 // as the layout for Swagger-UI
 SwaggerUI({
-  url: "https://access.theiot.company/version-test/api/1.1/swagger.json",
+  url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
   plugins: [ OperationsLayoutPlugin ],
   layout: "OperationsLayout"
 })
@@ -85,7 +85,7 @@ const AugmentingLayoutPlugin = () => {
 // Provide the plugin to Swagger-UI, and select AugmentingLayout
 // as the layout for Swagger-UI
 SwaggerUI({
-  url: "https://access.theiot.company/version-test/api/1.1/swagger.json",
+  url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
   plugins: [ AugmentingLayoutPlugin ],
   layout: "AugmentingLayout"
 })

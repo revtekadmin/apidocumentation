@@ -3,7 +3,7 @@ const configSchema = require("./variables")
 
 const defaultBaseConfig = {
   url: {
-    value: "https://access.theiot.company/version-test/api/1.1/swagger.json",
+    value: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
     schema: {
       type: "string",
       base: true

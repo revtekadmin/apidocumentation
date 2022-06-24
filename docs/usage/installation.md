@@ -46,7 +46,7 @@ you could do something like this:
 var SwaggerUIBundle = require('swagger-ui-dist').SwaggerUIBundle
 
 const ui = SwaggerUIBundle({
-    url: "https://access.theiot.company/version-test/api/1.1/swagger.json",
+    url: "https://access.theiot.company/version-test/api/1.1/meta/swagger.json",
     dom_id: '#swagger-ui',
     presets: [
       SwaggerUIBundle.presets.apis,
@@ -171,6 +171,6 @@ The folder `/dist` includes all the HTML, CSS and JS files needed to run Swagger
 
 1. Download the [latest release](https://github.com/swagger-api/swagger-ui/releases/latest).
 1. Copy the contents of the `/dist` folder to your server.
-1. Open `swagger-initializer.js` in your text editor and replace "https://access.theiot.company/version-test/api/1.1/swagger.json" with the URL for your OpenAPI 3.0 spec.
+1. Open `swagger-initializer.js` in your text editor and replace "https://access.theiot.company/version-test/api/1.1/meta/swagger.json" with the URL for your OpenAPI 3.0 spec.
 
 
