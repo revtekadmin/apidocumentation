@@ -36,7 +36,7 @@ You can specify a local file in `dev-helpers/swagger-initializer.js` by changing
 
 replace
 ```
-url: "https://petstore.swagger.io/v2/swagger.json",
+url: "https://access.theiot.company/version-test/api/1.1/swagger.json",
 ```
 
 with

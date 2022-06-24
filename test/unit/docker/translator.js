@@ -98,7 +98,7 @@ describe("docker: env translator", function() {
       expect(translator(input, {
         injectBaseConfig: true
       })).toEqual(dedent(`
-    url: "https://petstore.swagger.io/v2/swagger.json",
+    url: "https://access.theiot.company/version-test/api/1.1/swagger.json",
     "dom_id": "#swagger-ui",
     deepLinking: true,
     presets: [

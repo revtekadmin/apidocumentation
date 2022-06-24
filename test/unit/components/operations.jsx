@@ -27,7 +27,7 @@ describe("<Operations/>", function(){
       },
       specSelectors: {
         isOAS3() { return false },
-        url() { return "https://petstore.swagger.io/v2/swagger.json" },
+        url() { return "https://access.theiot.company/version-test/api/1.1/swagger.json" },
         taggedOperations() {
           return fromJS({
           "default": {
@@ -82,7 +82,7 @@ describe("<Operations/>", function(){
       },
       specSelectors: {
         isOAS3() { return true },
-        url() { return "https://petstore.swagger.io/v2/swagger.json" },
+        url() { return "https://access.theiot.company/version-test/api/1.1/swagger.json" },
         taggedOperations() {
           return fromJS({
           "default": {

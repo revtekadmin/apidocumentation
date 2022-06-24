@@ -14,7 +14,7 @@ if [[ "${BASE_URL}" != "/" ]]; then
 fi
 
 if [ "$SWAGGER_JSON_URL" ]; then
-  sed -i "s|https://petstore.swagger.io/v2/swagger.json|$SWAGGER_JSON_URL|g" $INITIALIZER_SCRIPT
+  sed -i "s|https://access.theiot.company/version-test/api/1.1/swagger.json|$SWAGGER_JSON_URL|g" $INITIALIZER_SCRIPT
   sed -i "s|http://example.com/api|$SWAGGER_JSON_URL|g" $INITIALIZER_SCRIPT
 fi
 
@@ -35,7 +35,7 @@ if [[ -f "$SWAGGER_JSON" ]]; then
   fi
   sed -i "s|#SWAGGER_ROOT|root $SWAGGER_ROOT/;|g" $NGINX_CONF
 
-  sed -i "s|https://petstore.swagger.io/v2/swagger.json|$REL_PATH|g" $INITIALIZER_SCRIPT
+  sed -i "s|https://access.theiot.company/version-test/api/1.1/swagger.json|$REL_PATH|g" $INITIALIZER_SCRIPT
   sed -i "s|http://example.com/api|$REL_PATH|g" $INITIALIZER_SCRIPT
 fi
 
