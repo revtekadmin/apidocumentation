@@ -1292,7 +1292,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -2064,7 +2064,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -2836,7 +2836,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -3608,7 +3608,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -4380,7 +4380,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -5152,7 +5152,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],
@@ -5924,7 +5924,7 @@
           {
             "name": "constraints",
             "in": "query",
-            "description": "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+            "description": "Search constraints",
             "type": "string"
           }
         ],

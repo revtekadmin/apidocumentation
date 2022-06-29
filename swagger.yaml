@@ -865,7 +865,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -1382,7 +1382,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -1899,7 +1899,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -2416,7 +2416,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -2933,7 +2933,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -3450,7 +3450,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
@@ -3967,7 +3967,7 @@ paths:
           type: boolean
         - name: constraints
           in: query
-          description: Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)
+          description: Search constraints
           type: string
       responses:
         '200':
